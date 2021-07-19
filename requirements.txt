@@ -1,4 +1,5 @@
 numpy
+libgl1-mesa-glx
 opencv-python
 PyWavelets
 scikit-image
