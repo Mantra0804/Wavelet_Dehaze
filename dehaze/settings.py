@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-#&6_+e(z_abtp+-i=gm$&nnobs=kjejsut-+*ur86bdg+kn6)u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['dehaze-wavelet.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition

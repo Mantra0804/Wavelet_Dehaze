@@ -14,7 +14,8 @@ def dehaz(request):
     filename=fs.save(image.name,image)
     
     templateurl=fs.open(filename)
-    dehazed = run([sys.executable,"E:\Mtech\Thesis\Webpage\dehaze\sample.py",str(templateurl),str(filename)],shell=False,stdout=PIPE)
+    dehazed = run([sys.executable,"E:\Mtech\Thesis\Webpage\Wavelet_Dehaze\sample.py",str(templateurl),str(filename)],shell=False,stdout=PIPE)
+    
     templateurl = os.path.join("media",filename)
     rs =os.path.join("media","result.png")
     
