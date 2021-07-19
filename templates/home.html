@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Image Dehazing
+</title>
+</head>
+<style>
+    
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #000;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    font-family: aktiv-grotesk-extended, sans-serif;
+	font-weight: 700;
+	border: 2px solid #000;
+	border-radius: 3rem;
+	overflow: hidden;
+	color: #ffff;
+    -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+    
+}
+
+    .button:hover {
+  background: #fff;
+  color: #000;
+}
+
+    .center {
+      margin: 0;
+      position: absolute;
+      left:50%;  
+      top: 50%;
+      -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 800px){
+				body #cdawrap {
+					transform: none;
+					border-radius: 0px;
+				}
+			}
+
+
+.topnav {
+  background-color: #000;
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+  top: 10%;
+  margin: 0;
+  color:#fff;
+  text-align: center;
+  font-size: larger;
+  }
+.topnav a{
+    
+  padding: 10;
+  
+}
+
+/* Style the links inside the navigation bar */
+
+    </style>
+    
+    
+<body style="margin: 0;">
+    <div class="topnav">
+        
+        <p>Image Dehazing In Wavelet Domain</p>
+    
+    </div>
+        <div class="center">
+                
+            <form action="/dehaz" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <center>
+                    <button class=" button " type="submit" >Dehaze Image</button>
+                </center>
+                <br><br>
+                <input  type="file"  name="image" required>
+                
+            
+        </form>
+       
+    </div>    
+
+
+</body>
+</html>
