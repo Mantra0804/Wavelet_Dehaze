@@ -22,6 +22,6 @@ def dehaz(request):
     #dehazed = run([sys.executable,"E:\Mtech\Thesis\Webpage\Wavelet_Dehaze\sample.py",str(templateurl),str(filename)],shell=False,stdout=PIPE)
     
     templateurl = os.path.join("media",filename)
-    rs =os.path.join("media","result.png")
+    rs =os.path.join("media","result.jpeg")
     
     return render(request,'results.html',{'src':templateurl,'rs':rs})
