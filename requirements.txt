@@ -1,5 +1,6 @@
 numpy
-opencv-python-headless==4.2.0.32PyWavelets
+opencv-python-headless==4.2.0.32
+PyWavelets
 scikit-image
 django-heroku
 gunicorn
