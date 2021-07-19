@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,9 +25,7 @@ SECRET_KEY = 'django-insecure-#&6_+e(z_abtp+-i=gm$&nnobs=kjejsut-+*ur86bdg+kn6)u
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com']
-
+ALLOWED_HOSTS = ['dehaze-wavelet.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -129,3 +128,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+# Activate Django-Heroku.
+django_heroku.settings(locals())
