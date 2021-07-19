@@ -8,5 +8,5 @@ def fun(inp,name):
     dehazed_image = dehaze(img)
     dehazed_image = adjust(dehazed_image)
 
-    save = inp.replace(name,"result.png")
+    save = inp.replace(name,"result.jpeg")
     cv2.imwrite(save,dehazed_image*255)
