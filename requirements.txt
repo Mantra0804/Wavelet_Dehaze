@@ -1,6 +1,5 @@
 numpy
 opencv-python
-pywt
+PyWavelets
 scikit-image
-
-math
+python-math
