@@ -1,7 +1,5 @@
 numpy
-libgl1-mesa-glx
-opencv-python
-PyWavelets
+opencv-python-headless==4.2.0.32PyWavelets
 scikit-image
 django-heroku
 gunicorn
