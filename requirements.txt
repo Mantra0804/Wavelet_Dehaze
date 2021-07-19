@@ -1,5 +1,6 @@
 numpy
-cv2
+opencv-python
 pywt
-skimage
+scikit-image
+
 math
