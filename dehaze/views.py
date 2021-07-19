@@ -1,8 +1,8 @@
 from os import pipe
 from django.shortcuts import render
-from subprocess import run,PIPE
+from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-import sys
+
 import os
 from sample import fun
 
@@ -10,7 +10,9 @@ def home(request):
     return render(request,'home.html')
 
 def dehaz(request):
-    
+    for files in os.listdir(settings.MEDIA_ROOT):
+        os.remove(os.path.join(settings.MEDIA_ROOT,files))
+        
     image=request.FILES['image']
     fs=FileSystemStorage()
     filename=fs.save(image.name,image)
